@@ -1,0 +1,138 @@
+-- total 10 tables
+
+CREATE TABLE `countrycode`(
+  `country` string, 
+  `alpha-2 code` string, 
+  `alpha-3 code` string, 
+  `numeric code` bigint, 
+  `latitude` double, 
+  `longitude` double);
+  
+  CREATE TABLE `countypopulation`(
+  `id` string, 
+  `id2` bigint, 
+  `county` string, 
+  `state` string, 
+  `population estimate 2018` bigint);
+  
+  CREATE TABLE `enigma_jhud`(
+  `fips` bigint, 
+  `admin2` string, 
+  `province_state` string, 
+  `country_region` string, 
+  `last_update` string, 
+  `latitude` double, 
+  `longitude` double, 
+  `confirmed` bigint, 
+  `deaths` bigint, 
+  `recovered` bigint, 
+  `active` string, 
+  `combined_key` string);
+  
+  CREATE TABLE `rearc_usa_hospital_beds`(
+  `objectid` int, 
+  `hospital_name` string, 
+  `hospital_type` string, 
+  `hq_address` string, 
+  `hq_address1` string, 
+  `hq_city` string, 
+  `hq_state` string, 
+  `hq_zip_code` string, 
+  `county_name` string, 
+  `state_name` string, 
+  `state_fips` string, 
+  `cnty_fips` string, 
+  `fips` string, 
+  `num_licensed_beds` int, 
+  `num_staffed_beds` int, 
+  `num_icu_beds` int, 
+  `adult_icu_beds` int, 
+  `pedi_icu_beds` double, 
+  `bed_utilization` double, 
+  `avg_ventilator_usage` double, 
+  `potential_increase_in_bed_capac` int, 
+  `latitude` double, 
+  `longtitude` double);
+  
+  CREATE TABLE `state_abv`(
+  `state` string COMMENT '', 
+  `abbreviation` string COMMENT '');
+  
+  CREATE TABLE `states_daily`(
+  `date` string, 
+  `state` string, 
+  `positive` double, 
+  `hospitalized` double, 
+  `death` double, 
+  `total` double, 
+  `hash` string, 
+  `datechecked` string, 
+  `totaltestresults` double, 
+  `fips` string, 
+  `deathincrease` double, 
+  `hospitalizedincrease` double, 
+  `negativeincrease` double, 
+  `positiveincrease` double, 
+  `totaltestresultsincrease` double, 
+  `negative` double, 
+  `pending` double);
+  
+  CREATE TABLE `us_county`(
+  `date` string, 
+  `county` string, 
+  `state` string, 
+  `fips` bigint, 
+  `cases` bigint, 
+  `deaths` bigint);
+  
+  CREATE TABLE `us_daily`(
+  `date` string, 
+  `states` string, 
+  `positive` double, 
+  `negative` double, 
+  `posneg` double, 
+  `pending` double, 
+  `hospitalized` double, 
+  `death` double, 
+  `total` double, 
+  `hash` string, 
+  `datechecked` string, 
+  `totaltestresults` double, 
+  `deathincrease` double, 
+  `hospitalizedincrease` double, 
+  `negativeincrease` double, 
+  `positiveincrease` double, 
+  `totaltestresultsincrease` double);
+  
+  CREATE TABLE `us_states`(
+  `date` string, 
+  `state` string, 
+  `fips` bigint, 
+  `cases` bigint, 
+  `deaths` bigint);
+  
+ CREATE TABLE `us_total_latest`(
+  `positive` string, 
+  `negative` string, 
+  `pending` string, 
+  `hospitalizedcurrently` string, 
+  `hospitalizedcumulative` string, 
+  `inicucurrently` string, 
+  `inicucumulative` string, 
+  `onventilatorcurrently` string, 
+  `onventilatorcumulative` string, 
+  `recovered` string, 
+  `hash` string, 
+  `lastmodified` string, 
+  `death` string, 
+  `hospitalized` string, 
+  `total` string, 
+  `totaltestresults` string, 
+  `posneg` string, 
+  `notes` string);
+  
+  
+  
+  
+  
+  
